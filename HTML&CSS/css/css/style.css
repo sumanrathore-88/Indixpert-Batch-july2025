@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font: 16px/1.7 "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f2f2f2;
+    color: #333.5;
+    
+}
+
+
+.hero {
+    height: 100vh;
+    background:
+      linear-gradient(
+        rgba(75, 77, 237, 0.7),
+        rgba(42, 76, 240, 0.7),
+        rgba(106, 90, 249, 0.7)
+      ),
+      url("./image/task.jpeg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.btn {
+    background: #32e67f;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+}
+.section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.section.light {
+    background: white;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.section p {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.section-image {
+    width: 280px;        
+    max-width: 90%;      
+    height: auto;        
+    margin: 0 auto 30px; 
+    display: block;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 250px;
+    text-align: center;
+}
+
+.icon {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+ footer {
+    margin-top: 40px;
+}
+
+.footer-top {
+    background: linear-gradient(to right, #5a60f0, #4b4ded);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+.footer-bottom {
+    background: #2f3336;
+    color: #d3d3d3;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom div {
+    margin: 10px;
+}
+
+.footer-bottom h4 {
+    color: #fff;
+}

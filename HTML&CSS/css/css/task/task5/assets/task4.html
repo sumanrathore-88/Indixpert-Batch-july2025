@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: auto auto auto;
+      gap: 20px;
+      padding: 10px;
+      border: 2px solid #4da3ff;
+    }
+
+    .box {
+      background-color: #54789a;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+
+    .one {
+      grid-column: 1 / -1;
+    }
+
+    .two {
+      grid-column: 1 / 2;
+    }
+
+    .three {
+      grid-column: 2 / 3;
+    }
+
+    .four {
+      grid-column: 2 / 3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box one">One</div>
+    <div class="box two">Two</div>
+    <div class="box three">Three</div>
+    <div class="box four">Four</div>
+  </div>
+
+</body>
+</html>

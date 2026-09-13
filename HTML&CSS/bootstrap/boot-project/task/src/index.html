@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+     <script type="module" src="./js/main.js"></script>
+</head>
+
+    <body class="bg-light">
+
+<div class="container min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="col-12 col-md-8 col-lg-6">
+    <div class="card shadow p-4">
+      <h2 class="text-center mb-4">User Registration</h2>
+
+      <form class="needs-validation" novalidate>
+
+        <!-- First Name -->
+        <div class="mb-3">
+          <label class="form-label">First Name</label>
+          <input type="text" class="form-control" minlength="3" required>
+          <div class="invalid-feedback">
+            First name must be at least 3 characters.
+          </div>
+        </div>
+
+        <!-- Last Name -->
+        <div class="mb-3">
+          <label class="form-label">Last Name</label>
+          <input type="text" class="form-control" required>
+          <div class="invalid-feedback">
+            Last name is required.
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" required>
+          <div class="invalid-feedback">
+            Enter a valid email address.
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="mb-3">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-control"
+                 pattern="^(0|91)?[6-9][0-9]{9}$" required>
+          <div class="invalid-feedback">
+            Phone must start with 0, 91, or 6-9 and be valid.
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control"
+                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                 required>
+          <div class="invalid-feedback">
+            Minimum 8 characters with uppercase, lowercase, digit & special character.
+          </div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-3">
+          <label class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" required>
+          <div class="invalid-feedback">
+            Please confirm your password.
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="mb-3">
+          <label class="form-label">Gender</label>
+          <select class="form-select" required>
+            <option value="">Choose...</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select gender.
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="mb-3">
+          <label class="form-label">Skills</label><br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">HTML</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">CSS</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">JavaScript</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">Bootstrap</label>
+          </div>
+        </div>
+
+        <!-- Country -->
+        <div class="mb-3">
+          <label class="form-label">Country</label>
+          <select class="form-select" required>
+            <option value="">Select Country</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>Canada</option>
+          </select>
+          <div class="invalid-feedback">
+            Country is required.
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="mb-3">
+          <label class="form-label">Short Bio</label>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+
+        <!-- Terms -->
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" required>
+          <label class="form-check-label">
+            I agree to Terms & Conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button class="btn btn-primary w-100" type="submit">
+          Register
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Validation Script -->
+<script>
+(() => {
+  'use strict'
+  const forms = document.querySelectorAll('.needs-validation')
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+
+</body>
+</html>

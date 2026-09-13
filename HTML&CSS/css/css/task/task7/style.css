@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100vh;
+}
+
+
+input {
+    display: none;
+}
+
+
+.left {
+    width: 30%;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+.left img {
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.left img:hover {
+    border-color: #007bff;
+}
+
+
+.right {
+    width: 70%;
+    padding: 40px;
+}
+
+.content {
+    display: none;
+}
+
+
+#html:checked ~ .right .html {
+    display: block;
+}
+
+#css:checked ~ .right .css {
+    display: block;
+}
+
+#bootstrap:checked ~ .right .bootstrap {
+    display: block;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Moving Container Animation</title>
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+  }
+
+  .wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #aaa;
+  }
+
+  .box {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #4CAF50;
+    animation: moveBox 8s infinite linear;
+  }
+
+  @keyframes moveBox {
+    
+    0% {
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+    }
+
+    25% {
+      top: 0;
+      left: 240px;
+      border-radius: 50%;
+    }
+
+
+    50% {
+      top: 240px;
+      left: 240px;
+      border-radius: 25%;
+    }
+
+    
+    75% {
+      top: 240px;
+      left: 0;
+      border-radius: 0%;
+    }
+
+    
+    100% {
+      top: 0;
+      left: 0;
+      border-radius: 0%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="box"></div>
+</div>
+
+</body>
+</html>

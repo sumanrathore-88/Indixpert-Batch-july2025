@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Layout</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        
+
+        .container {
+            display: flex;
+            border: 1px solid rgba(0, 0, 255, 0.5);
+             padding: 3px;
+            justify-content: center;
+            width: 500px;
+        }
+
+        .card {
+            font-size: 1.3em;
+            width: calc((500px/3));
+            align-items: stretch;
+            padding: 6px;
+            background-color: rgba(0, 0, 255, 0.5);
+            border-radius: 4px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        I am small
+    </div>
+
+    <div class="card">
+        I have more content than the very small item.
+    </div>
+
+    <div class="card">
+        I have lots of content. So much content that I don't know where it is all
+        going to go. I'm glad that CSS is pretty good at dealing with situations
+        where we end up with more words than expected!
+    </div>
+</div>
+
+</body>
+</html>

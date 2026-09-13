@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard Layout</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    body {
+        background: #ffffff;
+    }
+
+    .container {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    
+    .sidebar {
+        width: 90px;
+        background: linear-gradient(180deg, #1b0b12, #0f0509);
+    }
+
+    
+    .main {
+        flex: 1;
+        padding: 30px;
+    }
+
+    .card {
+        background: gray;
+        border-radius: 10px;
+    }
+
+    
+    .top-card {
+        height: 110px;
+        margin-bottom: 30px;
+    }
+
+    
+    .small-cards {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .small-cards .card {
+        width: 90px;
+        height: 80px;
+    }
+
+    
+    .middle {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .middle-left {
+        flex: 1;
+        display: flex;
+        gap: 15px;
+    }
+
+    .middle-left .card:first-child {
+        flex: 2;
+        height: 90px;
+    }
+
+    .middle-left .card:last-child {
+        flex: 1;
+        height: 90px;
+    }
+
+    .middle-right {
+        width: 280px;
+        height: 180px;
+    }
+
+    
+    .bottom {
+        display: flex;
+        gap: 15px;
+    }
+
+    .bottom .card {
+        height: 90px;
+        flex: 1;
+    }
+
+    .bottom .card:last-child {
+        flex: 0.5;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar"></div>
+
+    <div class="main">
+        <div class="card top-card"></div>
+
+        <div class="small-cards">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+
+        <div class="middle">
+            <div class="middle-left">
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+            <div class="card middle-right"></div>
+        </div>
+
+        <div class="bottom">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
